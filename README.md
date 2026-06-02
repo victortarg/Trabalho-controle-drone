@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como parte da disciplina de **Sistemas de Controle
 - **Rastreamento Autônomo:** O drone identifica e centraliza um rosto na tela usando o classificador Haar Cascade.
 - **Controlador Digital PD:** Cálculo de velocidade em tempo real baseado no erro de posição (em pixels) e na sua taxa de variação ($de/dt$), garantindo um rastreamento suave e mitigando oscilações (overshoot).
 - **HUD (Head-Up Display):** Interface construída em Pygame que exibe a transmissão de vídeo ao vivo, nível de bateria, status do tracking e um indicador visual de distância.
-- **Data Logging (Caixa Preta):** Exportação automática de métricas de voo para um arquivo `.csv` para análise e plotagem de gráficos de resposta ao degrau (ideal para artigos modelo IEEE).
+- **Data Logging:** Exportação automática de métricas de voo para um arquivo `.csv` para análise e plotagem de gráficos de resposta ao degrau.
 
 ---
 
@@ -27,7 +27,7 @@ _(Dependências: `djitellopy`, `opencv-python`, `pygame`, `numpy`)_
 
 ---
 
-## 🎮 Como Operar o Drone
+## Como Operar o Drone
 
 1. Ligue o seu DJI Tello.
 2. Conecte o Wi-Fi do seu computador à rede gerada pelo Tello (ex: `TELLO-XXXXXX`).
@@ -66,11 +66,11 @@ $$u(k) = (K_p \cdot e(k)) + (K_d \cdot \frac{e(k) - e(k-1)}{T_s})$$
 - **Eixo Y (Altitude):** Centraliza o rosto verticalmente na imagem.
 - **Eixo Z (Distância - Pitch):** Mantém uma distância segura baseada na largura da _bounding box_ (alvo de 180px). Possui uma **Zona Morta** de tolerância ($\pm 30$ px) para evitar trepidações em regime permanente.
 
-_Os ganhos ($K_p$ e $K_d$) podem ser ajustados nas variáveis globais no topo do código._
+_Os ganhos ($$K_p$$ e $$K_d$$) podem ser ajustados nas variáveis globais no topo do código._
 
 ---
 
-## Coleta de Dados para o Artigo IEEE
+## Coleta de Dados para o Relatório
 
 Para gerar os gráficos de análise de estabilidade e regime permanente exigidos pela disciplina:
 
