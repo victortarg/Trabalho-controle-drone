@@ -66,7 +66,7 @@ $$u(k) = (K_p \cdot e(k)) + (K_d \cdot \frac{e(k) - e(k-1)}{T_s})$$
 - **Eixo Y (Altitude):** Centraliza o rosto verticalmente na imagem.
 - **Eixo Z (Distância - Pitch):** Mantém uma distância segura baseada na largura da _bounding box_ (alvo de 180px). Possui uma **Zona Morta** de tolerância ($\pm 30$ px) para evitar trepidações em regime permanente.
 
-$$_Os ganhos (K_p e K_d) podem ser ajustados nas variáveis globais no topo do código._$$
+_Os ganhos $$(K_p e K_d)$$ podem ser ajustados nas variáveis globais no topo do código._
 
 ---
 
