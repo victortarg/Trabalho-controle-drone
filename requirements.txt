@@ -2,3 +2,5 @@ djitellopy
 opencv-python
 pygame
 numpy
+pandas
+matplotlib

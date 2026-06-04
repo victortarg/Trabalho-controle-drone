@@ -1,10 +1,5 @@
 .vs
 
-# Logs e Dados do Projeto Tello
-dados_controle_tello.csv
-*.log
-*.csv
-
 # Python (Arquivos compilados e cache)
 __pycache__/
 *.py[cod]
